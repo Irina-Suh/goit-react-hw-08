@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  .label{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .field {
+    font: inherit;
+    padding: 4px;
+    width: 270px;
+    height: 30px;
+  }
+  .button {
+   
+    width:150px;
+    height: 30px;
+       
+  }
+  .error{
+    color:red;
+  }
+  
