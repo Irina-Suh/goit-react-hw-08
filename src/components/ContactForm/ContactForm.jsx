@@ -3,7 +3,8 @@ import { Form, Field, Formik, ErrorMessage} from 'formik'
 import s from './ContactForm.module.css'
 import * as Yup from "yup";
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
+
 // import { nanoid } from 'nanoid';
 
 
@@ -39,12 +40,12 @@ name: Yup.string().trim().min(3, "Too Short!").max(50, "Too Long!").required(),
     <div>
         <Formik validationSchema={feedbackSchema} onSubmit={onSubmit} initialValues ={initialValues}>
         <Form className={s.form} >
-            <label className={s.label}> Name
-            <Field  type="text" className={s.field} placeholder='Name' name ='name' />
+            <label className='label'> Name
+            <Field  type="text" className='input' placeholder='Name' name ='name' />
             <ErrorMessage name ='name' className={s.error} component={'div'}/>
             </label>
-            <label className={s.label}> Number
-            <Field type="text"  className={s.field}   placeholder='444-44-44' name ='number'/>
+            <label className='label'> Number
+            <Field type="text"  className='input'   placeholder='444-44-44' name ='number'/>
             <ErrorMessage name ='number'  className={s.error}  component={'div'}/>
             </label>
             <button  className={s.button} type='submit'>Add contact</button>
