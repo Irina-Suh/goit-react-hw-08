@@ -11,9 +11,10 @@ const RegisterForm = () => {
     email: '',
     password: '',
   };
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, options) => {
     console.log(values);
     dispatch(register(values));
+    options.resetForm();
   };
   return (
     <div className="hero bg-base-200 ">
