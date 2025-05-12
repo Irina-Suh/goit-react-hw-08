@@ -4,6 +4,7 @@ import s from './ContactForm.module.css'
 import * as Yup from "yup";
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
+import SearchBox from '../SearchBox/SearchBox';
 
 // import { nanoid } from 'nanoid';
 
@@ -51,6 +52,7 @@ name: Yup.string().trim().min(3, "Too Short!").max(50, "Too Long!").required(),
             <button  className={s.button} type='submit'>Add contact</button>
         </Form>
         </Formik>
+        <SearchBox  />
         </div>
   )
 }
